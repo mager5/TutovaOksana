@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Основная палитра */
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #F1F4F8;
+  --accent-blue: #AFCBFF;
+  --cta-button: #F4C7AB;
+  --text-primary: #2C2C2C;
+  --text-secondary: #7A7A7A;
+  
+  /* Дополнительные цвета */
+  --bg-lavender: #EAE7F2;
+  --bg-green: #DCE9DC;
+  --bg-orange: #F8D6C1;
+  
+  /* Градиент */
+  --gradient-start: #FDF6F1;
+  --gradient-end: #F1F4F8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+}
+
+/* Типографика */
+.font-primary {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-secondary {
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-accent {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Sora', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-gradient-soft {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  }
+  
+  .text-primary {
+    color: var(--text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .bg-primary {
+    background-color: var(--bg-primary);
+  }
+  
+  .bg-secondary {
+    background-color: var(--bg-secondary);
+  }
+  
+  .bg-accent {
+    background-color: var(--accent-blue);
+  }
+  
+  .bg-cta {
+    background-color: var(--cta-button);
+  }
+  
+  .border-soft {
+    border-color: rgba(44, 44, 44, 0.1);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  }
+  
+  .shadow-medium {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  }
+  
+  .shadow-large {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+  
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-800 mb-6 leading-tight;
+  }
+  
+  .section-subtitle {
+    @apply text-lg sm:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white px-8 py-4 rounded-xl font-medium hover:bg-blue-700 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-blue-200 text-blue-700 px-8 py-4 rounded-xl font-medium hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 inline-flex items-center justify-center;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-neutral-100 p-8 hover:shadow-medium transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .card-simple {
+    @apply bg-white rounded-xl shadow-soft border border-neutral-100 p-6 hover:shadow-medium transition-all duration-300;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+  }
+  
+  .hero-bg {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+}

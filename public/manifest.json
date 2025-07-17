@@ -1,0 +1,58 @@
+{
+  "name": "Тутова Оксана Сергеевна - Психолог",
+  "short_name": "Оксана Тутова",
+  "description": "Психологическое консультирование онлайн. Индивидуальный подход, безопасное пространство, проверенные методики.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#AFCBFF",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ru",
+  "categories": ["health", "lifestyle", "medical"],
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Записаться на консультацию",
+      "short_name": "Записаться",
+      "description": "Быстрая запись на консультацию",
+      "url": "/#booking",
+      "icons": [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Тарифы",
+      "short_name": "Цены",
+      "description": "Посмотреть тарифы на консультации",
+      "url": "/#pricing",
+      "icons": [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
