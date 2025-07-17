@@ -101,12 +101,12 @@ temp/
 ehthumbs.db
 Thumbs.db
 
-# Screenshots
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.svg
+# Screenshots (commented out to allow project images)
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.svg
 
 # Railway
 .railway/

@@ -49,7 +49,7 @@ const Header = () => {
           </motion.div>
 
           {/* Десктопная навигация */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-6">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
@@ -57,7 +57,7 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-text-secondary hover:text-text-primary transition-colors duration-300 font-medium relative group"
+                className="text-text-secondary hover:text-text-primary transition-colors duration-300 font-medium relative group text-sm"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-blue transition-all duration-300 group-hover:w-full"></span>
@@ -66,7 +66,7 @@ const Header = () => {
           </nav>
 
           {/* Мобильное меню кнопка */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-text-primary hover:text-accent-blue transition-colors duration-300 p-2"
@@ -86,7 +86,7 @@ const Header = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-bg-primary border-t border-gray-200/20"
+            className="lg:hidden bg-bg-primary border-t border-gray-200/20"
           >
             <div className="px-4 py-4 space-y-3">
               {navItems.map((item, index) => (
