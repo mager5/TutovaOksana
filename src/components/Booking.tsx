@@ -36,8 +36,8 @@ const Booking = () => {
   }
 
   return (
-    <section id="booking" className="py-20 bg-bg-primary" ref={ref}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="booking" className="py-20 bg-bg-primary no-horizontal-scroll" ref={ref}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 no-horizontal-scroll">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
