@@ -60,8 +60,12 @@ const Pricing = () => {
     }
   ]
 
-  const handleBookingClick = () => {
-    window.open('https://t.me/karmaterapy', '_blank')
+  const handleBookingClick = (planName: string) => {
+    // Простое перенаправление на Telegram без предзаполненного текста
+    const telegramUrl = `https://t.me/ok_karmaterapy`
+    
+    // Открываем ссылку
+    window.open(telegramUrl, '_blank')
   }
 
   return (
@@ -164,7 +168,7 @@ const Pricing = () => {
 
                 {/* Кнопка */}
                 <motion.button
-                  onClick={handleBookingClick}
+                  onClick={() => handleBookingClick(plan.name)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-4 rounded-2xl font-semibold transition-all duration-300 ${

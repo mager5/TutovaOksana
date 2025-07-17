@@ -32,7 +32,7 @@ const Booking = () => {
 
   const handleBookingClick = () => {
     // Здесь будет ссылка на Telegram
-    window.open('https://t.me/karmaterapy', '_blank')
+    window.open('https://t.me/ok_karmaterapy', '_blank')
   }
 
   return (
@@ -65,17 +65,7 @@ const Booking = () => {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="relative"
               >
-                {/* Соединительная линия */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-accent-blue/30 transform -translate-y-1/2 z-0">
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-                      transition={{ duration: 0.8, delay: (index + 1) * 0.2 }}
-                      className="h-full bg-accent-blue origin-left"
-                    />
-                  </div>
-                )}
+                {/* Соединительные линии убраны */}
                 
                 <div className="relative z-10 text-center">
                   {/* Номер шага */}
@@ -86,13 +76,7 @@ const Booking = () => {
                     {step.number}
                   </motion.div>
                   
-                  {/* Иконка */}
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="w-12 h-12 bg-accent-blue/10 rounded-full flex items-center justify-center mx-auto mb-4"
-                  >
-                    <IconComponent className="w-6 h-6 text-accent-blue" />
-                  </motion.div>
+                  {/* Иконка убрана */}
                   
                   {/* Заголовок */}
                   <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">
