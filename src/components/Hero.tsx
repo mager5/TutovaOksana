@@ -15,12 +15,9 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 sm:pt-0 pb-16 sm:pb-20">
       {/* Фоновое изображение */}
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center sm:bg-center md:bg-[60%_center] lg:bg-center"
         style={{
-          backgroundImage: 'url(/DSC_1449-2.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundImage: 'url(/DSC_1449-2.jpg)'
         }}
       >
         {/* Современный оверлей для улучшения читаемости */}

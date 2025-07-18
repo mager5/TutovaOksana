@@ -200,7 +200,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-300">
-              <span>© 2024 Тутова Оксана Сергеевна</span>
+              <span>© {new Date().getFullYear()} Тутова Оксана Сергеевна</span>
               <Heart className="w-4 h-4 text-red-400" />
               <span>Сделано с заботой</span>
             </div>
